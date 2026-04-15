@@ -58,6 +58,13 @@ register_node('misha:oak_log', {
     groups = { choppy = 3 },
     is_ground_content = true
 })
+-- Доски дубовые
+register_node('misha:oak_planks', {
+    description = 'Oak Planks',
+    tiles = {'oak_planks.png'},
+    groups = { choppy = 3, wood = 1},
+    is_ground_content = true
+})
 -- Дубовые листья
 register_node('misha:oak_leaves', {
     description = 'Oak Leaves', -- Не забудьте поправить описание
@@ -130,4 +137,7 @@ oak_tree_schematic = dofile(core.get_modpath(core.get_current_modname()) .. "/oa
 dofile(core.get_modpath(core.get_current_modname()) .. "/biomes.lua")
 dofile(core.get_modpath(core.get_current_modname()) .. "/decorations.lua")
 dofile(core.get_modpath(core.get_current_modname()) .. "/tools.lua")
+dofile(core.get_modpath(core.get_current_modname()) .. "/craft.lua")
+dofile(core.get_modpath(core.get_current_modname()) .. "/items.lua")
+
 
