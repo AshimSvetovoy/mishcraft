@@ -112,20 +112,85 @@ register_node('misha:short_grass', {
     is_ground_content = true
 })
 
-register_node('misha:water_source', {
-    description = 'Essential node for mapgen alias “mapgen_water_source”',
-    tiles = { 'water_source.png' },
-    groups = { oddly_breakable_by_hand = 3 },
-    is_ground_content = true
+-- Текучая версия воды
+minetest.register_node('misha:water_flowing', {
+    description = 'Flowing Misha Water',
+    drawtype = 'flowingliquid',
+    tiles = { 'water_flowing_animated.png' },
+    special_tiles = {
+        {
+            name = 'water_flowing_animated.png',
+            backface_culling = false,
+            animation = {
+                type = 'vertical_frames',
+                aspect_w = 16,
+                aspect_h = 16,
+                length = 2.0 -- 2 секунды на полный цикл
+            }
+        },
+        {
+            name = 'water_flowing_animated.png',
+            backface_culling = false,
+            animation = {
+                type = 'vertical_frames',
+                aspect_w = 16,
+                aspect_h = 16,
+                length = 2.0
+            }
+        }
+    },
+    paramtype = 'light',
+    paramtype2 = 'flowingliquid',
+    walkable = false,
+    pointable = false,
+    diggable = false,
+    buildable_to = true,
+    is_ground_content = false,
+    drop = '',
+    drowning = 1,
+    liquidtype = 'flowing',
+    liquid_alternative_flowing = 'misha:water_flowing',
+    liquid_alternative_source = 'misha:water_source',
+    liquid_viscosity = 1,
+    liquid_range = 8,
+    post_effect_color = {a = 120, r = 30, g = 60, b = 90},
+    groups = { water = 3, liquid = 3, puts_out_fire = 1, not_in_creative_inventory = 1 }
 })
 
-register_node('misha:river_water_source', {
-    description = 'Essential node for mapgen alias “mapgen_river_water_source”',
-    tiles = { 'river_water_source.png' },
-    groups = { oddly_breakable_by_hand = 3 },
-    is_ground_content = true
+-- Источник воды
+minetest.register_node('misha:water_source', {
+    description = 'Misha Water Source',
+    drawtype = 'liquid',
+    tiles = {
+        {
+            name = 'water_source_animated.png',
+            backface_culling = false,
+            animation = {
+                type = 'vertical_frames',
+                aspect_w = 16,
+                aspect_h = 16,
+                length = 2.0
+            }
+        }
+    },
+    paramtype = 'light',
+    walkable = false,
+    pointable = true,
+    diggable = false,
+    buildable_to = true,
+    is_ground_content = true,
+    drop = '',
+    drowning = 1,
+    liquidtype = 'source',
+    liquid_alternative_flowing = 'misha:water_flowing',
+    liquid_alternative_source = 'misha:water_source',
+    liquid_viscosity = 1,
+    liquid_range = 8,
+    post_effect_color = {a = 120, r = 30, g = 60, b = 90},
+    groups = { water = 3, liquid = 3, puts_out_fire = 1, immortal = 1 },
+    on_blast = function() end,
+    can_dig = function() return false end
 })
-
 
 register_alias('mapgen_stone', 'misha:stone')
 register_alias('mapgen_water_source', 'misha:water_source')
