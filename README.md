@@ -1,3 +1,3 @@
-This is my game for Luanti.
+Это моя игра для Luanti
 
-Textures are from https://modrinth.com/resourcepack/vintage
+Текстуры отсюда https://modrinth.com/resourcepack/vintage
