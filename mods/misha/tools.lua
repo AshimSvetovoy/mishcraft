@@ -78,7 +78,7 @@ minetest.register_tool("misha:iron_shovel", {
         max_drop_level = 1,
         -- ГРУППЫ, КОТОРЫЕ КИРКА МОЖЕТ КОПАТЬ
         groupcaps = {
-             = {
+            crumbly = {
                 -- Время в секундах на копку блоков разного уровня сложности:
                 -- [уровень_сложности] = время_в_секундах
                 times = { [1] = 2.5, [2] = 1.5, [3] = 0.8 },
@@ -89,7 +89,7 @@ minetest.register_tool("misha:iron_shovel", {
             },
         },
         -- Урон по существам (группа "fleshy" — это мобы и игроки)
-        damage_groups = { fleshy = 4 },
+        damage_groups = { fleshy = 7 },
     },
     -- Группы предмета (например, для модов, которые ищут кирки)
     groups = { pickaxe = 1, tool = 1 },

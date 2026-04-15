@@ -23,6 +23,11 @@ register_item(':', {
                 times = {[1] = 3.50, [2] = 2.00, [3] = 0.70},
                 uses = 0,
             },
+            choppy = {
+                times = {[2] = 3.00, [3] = 1.50},
+                uses = 0,
+                maxlevel = 1,
+            }
         },
         damage_groups = {fleshy = 1},
     }
