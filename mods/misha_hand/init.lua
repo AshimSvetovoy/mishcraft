@@ -10,7 +10,7 @@ register_item(':', {
         max_drop_level = 0,
         groupcaps = {
             crumbly = {
-                times = {[2] = 3.00, [3] = 0.70},
+                times = {[3] = 1.50},
                 uses = 0,
                 maxlevel = 1,
             },
@@ -20,11 +20,11 @@ register_item(':', {
                 maxlevel = 1,
             },
             oddly_breakable_by_hand = {
-                times = {[1] = 3.50, [2] = 2.00, [3] = 0.70},
+                times = {[3] = 1.50},
                 uses = 0,
             },
             choppy = {
-                times = {[2] = 3.00, [3] = 1.50},
+                times = {[3] = 1.50},
                 uses = 0,
                 maxlevel = 1,
             }
