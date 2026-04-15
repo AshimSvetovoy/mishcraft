@@ -60,9 +60,13 @@ register_node('misha:oak_log', {
 })
 -- Дубовые листья
 register_node('misha:oak_leaves', {
-    description = 'Oak Log',
+    description = 'Oak Leaves', -- Не забудьте поправить описание
+    drawtype = "allfaces_optional", -- Тип отрисовки для листвы
     tiles = { 'oak_leaves.png' },
-    groups = { oddly_breakable_by_hand = 3 },
+    use_texture_alpha = "clip",    -- Режим прозрачности
+    paramtype = "light",           -- Для корректного освещения прозрачных блоков
+    sunlight_propagates = true,    -- Чтобы солнечный свет проходил сквозь листву
+    groups = { oddly_breakable_by_hand = 3, leaves = 1 }, -- Добавлен стандартный group для листвы
     is_ground_content = true,
 })
 -- Низкая трава
