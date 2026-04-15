@@ -28,14 +28,14 @@ register_node('misha:grass_block', {
     groups = { crumbly = 3 },
     is_ground_content = true
 })
--- Блок травы
+-- Песок
 register_node('misha:sand', {
     description = 'Sand',
     tiles = {'sand.png'},
     groups = { crumbly = 3 },
     is_ground_content = true
 })
--- Блок травы
+-- Кактус
 register_node('misha:cactus', {
     description = 'Cactus',
     tiles = {
