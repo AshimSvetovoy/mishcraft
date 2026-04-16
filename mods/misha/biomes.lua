@@ -1,29 +1,5 @@
 -- biomes.lua
-core.clear_registered_biomes()
 
--- Настройка шума для температуры
-local heat_noise = {
-    offset = 50,
-    scale = 30,
-    spread = {x = 50, y = 50, z = 50},  -- Уменьшите для более частых биомов
-    seed = 5349,
-    octaves = 3,
-    persist = 0.5,
-    lacunarity = 2.0,
-    flags = "defaults"
-}
-
--- Настройка шума для влажности
-local humidity_noise = {
-    offset = 50,
-    scale = 30,
-    spread = {x = 50, y = 50, z = 50},  -- Уменьшите для более частых биомов
-    seed = 842,
-    octaves = 3,
-    persist = 0.5,
-    lacunarity = 2.0,
-    flags = "defaults"
-}
 -- Основной травяной биом
 core.register_biome({
     name = "misha:grassland",
