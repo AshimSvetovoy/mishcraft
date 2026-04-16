@@ -6,6 +6,51 @@ register_node('misha:stone', {
     description = 'Stone',
     tiles = { 'stone.png' },
     groups = { cracky = 3 },
+    is_ground_content = true,
+    drop = 'misha:cobblestone'
+})
+
+-- Булыжник
+register_node('misha:cobblestone', {
+    description = 'Cobblestone',
+    tiles = { 'cobblestone.png' },
+    groups = { cracky = 3 },
+    is_ground_content = true
+})
+
+-- Железная руда
+register_node('misha:iron_ore', {
+    description = 'Iron Ore',
+    tiles = { 'iron_ore.png' },
+    groups = { cracky = 3 },
+    is_ground_content = true
+})
+-- Угольная руда
+register_node('misha:coal_ore', {
+    description = 'Coal Ore',
+    tiles = { 'coal_ore.png' },
+    groups = { cracky = 3 },
+    is_ground_content = true
+})
+-- Золотая руда
+register_node('misha:gold_ore', {
+    description = 'Gold Ore',
+    tiles = { 'gold_ore.png' },
+    groups = { cracky = 3 },
+    is_ground_content = true
+})
+-- Алмазная руда
+register_node('misha:diamond_ore', {
+    description = 'Diamond Ore',
+    tiles = { 'diamond_ore.png' },
+    groups = { cracky = 3 },
+    is_ground_content = true
+})
+-- Редстоуновая руда
+register_node('misha:redstone_ore', {
+    description = 'Redstone Ore',
+    tiles = { 'redstone_ore.png' },
+    groups = { cracky = 3 },
     is_ground_content = true
 })
 
