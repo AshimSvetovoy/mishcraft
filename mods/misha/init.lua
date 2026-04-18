@@ -15,5 +15,7 @@ dofile(core.get_modpath(core.get_current_modname()) .. "/tools.lua")
 dofile(core.get_modpath(core.get_current_modname()) .. "/craft.lua")
 dofile(core.get_modpath(core.get_current_modname()) .. "/items.lua")
 dofile(core.get_modpath(core.get_current_modname()) .. "/ore.lua")
+dofile(core.get_modpath(core.get_current_modname()) .. "/furnace.lua")
+
 
 

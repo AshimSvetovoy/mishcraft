@@ -54,3 +54,18 @@ core.register_biome({
     heat_point = 80,      -- Высокая температура
     humidity_point = 20,  -- Низкая влажность
 })
+
+core.register_biome({
+    name = "misha:farlands",
+    node_top = "misha:stone",
+    depth_top = 1,
+    node_filler = "misha:stone",
+    depth_filler = 50,
+
+    -- Абсурдные высоты
+    y_max = 31000,
+    y_min = -31000,
+
+    heat_point = 50,
+    humidity_point = 50,
+})
